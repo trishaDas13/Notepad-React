@@ -1,13 +1,144 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+}
+:root{
+  --white: #F7F7FF;
+  --black: #070600;
+  --gray: #69626D;
+  --blue: #3C91E6;
+}
+.no-notes {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.no-notes h2{
+  font-size: 3rem;
+}
+.no-notes button{
+  color: var(--white);
+  background: var(--blue);
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+.no-notes button:hover{
+  opacity: .8;
+}
+/* ---------------split------------- */
+
+.gutter {
+  background-color: #eee;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.gutter.gutter-horizontal {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+}
+.gutter.gutter-horizontal:hover {
+  cursor: col-resize;
+}
+.split {
+  display: flex;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* ---------------sidebar------------- */
+
+.sidebar{
+  width: 20%;
+  height: 100vh;
+}
+.sidebar__header{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  height: 10vh;
+}
+.sidebar__header-logo{
+  color: var(--black);
+  font-size: 1.5rem;
+  font-family: 'Libre Baskerville', serif;
+  text-transform: uppercase;
+}
+.sidebar__header-btn{
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background: var(--blue);
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sidebar__header-btn:hover{
+  color: var(--black);
+}
+.sidebar .note-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.note-list li{
+  width: 100%;
+  padding: 1rem;
+  padding-right: 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--gray);
+  cursor: pointer;
+  position: relative;
+}
+.note-list li .delete-btn{
+  position: absolute;
+  right: 1rem;
+  top: 1.2rem;
+  color: var(--black);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.note-list li .delete-btn:hover{
+  color: var(--white);
+}
+.note-list .selected-note{
+  color: var(--white);
+  background: var(--blue);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.note-list .selected-note .delete-btn{
+  top: 1.45rem;
+}
+
+/* ------------------------Editor------------------------- */
+.editor{
+  width: 100%;
+  height: 100vh;
+}
+.mde-header{
+  min-height: 10vh;
+  align-items: center;
+}
+.mde-header .mde-tabs button.selected {
+  padding: .5rem 1rem;
+  border: 1px solid #c8ccd0; 
 }
