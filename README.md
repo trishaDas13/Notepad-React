@@ -1,1 +1,2 @@
-[screen-capture.webm](https://github.com/trishaDas13/Notepad-React/assets/126088849/eee02fb9-b8b2-483b-8f3d-243acbfaa5e9)
+![image](https://github.com/trishaDas13/Notepad-React/assets/126088849/ee96618a-b957-4e31-9bcb-9aa03e98f9f2)
+
