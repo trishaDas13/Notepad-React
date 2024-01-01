@@ -11,7 +11,7 @@
   --white: #F7F7FF;
   --black: #070600;
   --gray: #69626D;
-  --blue: #3C91E6;
+  --blue: #CD8D7A;
 }
 .no-notes {
   width: 100%;
@@ -61,6 +61,7 @@
 .sidebar{
   width: 20%;
   height: 100vh;
+  background-color: #C3E2C2;
 }
 .sidebar__header{
   display: flex;
@@ -72,21 +73,21 @@
 .sidebar__header-logo{
   color: var(--black);
   font-size: 1.5rem;
-  font-family: 'Libre Baskerville', serif;
   text-transform: uppercase;
 }
 .sidebar__header-btn{
   width: 1.5rem;
   height: 1.5rem;
+  padding-bottom: 0.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--white);
   background: var(--blue);
   font-size: 1.5rem;
-  border: none;
   border-radius: 50%;
   cursor: pointer;
+  border: none;
 }
 .sidebar__header-btn:hover{
   color: var(--black);
